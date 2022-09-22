@@ -5,16 +5,24 @@
     <meta name="description" content="Это моя первая страница...">
     <meta name="author" content="Andrey">
     <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta property="og:title" content="Это моя первая страница...">
     <title>Андрей Браун - Веб-разработчик</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Андрей Браун</div>
-            <div class="menu">
+           <div class="container">
+               <div class="row">
+                   <div class="col-xxl-2 col-lg-3 col-7" >
+                       <div class="logo">Андрей Браун</div>
+                    </div>
+                   <div class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
+                       <div class="menu">
                 <ul>
                     <li><a href="#">Обо мне</a></li>
                     <li><a href="#">Услуги</a></li>
@@ -23,34 +31,62 @@
                     <li><a href="#">Отзывы</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
-            </div>
+                        </div>
+                  </div>
+                  <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end ">
+                      <div class="dropdown">
+  <a class="btn btn-warning dropdown-toggle white-btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Навигация
+  </a>
+
+  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#">Обо мне</a></li>
+                    <li><a class="dropdown-item" href="#">Услуги</a></li>
+                    <li><a class="dropdown-item" href="#">Кейсы</a></li>
+                    <li><a class="dropdown-item" href="#">Прайс</a></li>
+                    <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                    <li><a class="dropdown-item" href="#">Контакты</a></li>
+     </ul>
+                    </div>
+                  </div>
+               </div>
+           </div>
+            
+            
             
         </nav>
     </header>
     
     <main>
        <section class="main">
-        <div class="title_container">
+       <div class="container h-100"><div class="row align-items-center h-100"><div class="col-lg-6 mt-5 pt-5">
+            <div class="title_container mt-5">
             <h1>Привет <br> Я Андрей Браун</h1>
             <h4>Фулл стек веб-разработчик</h4>
             <input type="button" value="Обо мне">
             <input type="button" value="Мои работы">
+           </div>
         </div>
-       </section>
+        </div>
+        </div>
+     </section>
     
     <section class="about_me">
-       <div class="about_me_container" id="on-off">
+      <div class="container"><div class="row"><div class="px-3 col-lg-8 offset-lg-2 col-md-12 justify-content-center">
+          <div class="about_me_container" id="on-off">
             <h2>Обо мне</h2>
             <hr>
-            <img src="img/myphoto.png" id="myphoto" alt="">
-            <img src="img/boy-off.png" id="boy-off" alt="">
+            <img src="img/myphoto.png" alt="">
             <p class="firstText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias voluptatibus quas ducimus hic, tenetur harum sapiente. Maxime officia, esse aliquid.</p>
             <p class="secondText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus modi commodi ea vel necessitatibus maiores nemo quis tempore velit consequatur.</p>
             <a href="#">Скачать резюме</a>
         </div>
+      </div></div></div>
+       
     </section>
     <section class="skills">
-        <div class="skills_container">
+       <div class="container"><div class="row align-items-center justify-content-center h-100"><div class="px-0 col-12 offset-0 align-items-center justify-content-center">
+           <div class="skills_container">
             <h2>Что я умею</h2>
             <hr>
             <div class="skills_item">
@@ -75,9 +111,11 @@
             </div>
             <div class="clear"></div>
         </div>
+      </div></div> </div>       
     </section>
     <section class="portfolio">
-        <div class="portfolio_container">
+       <div class="container"><div class="row"><div class="col-12 align-items-center justify-content-center">
+           <div class="portfolio_container">
             <h2>Кейсы</h2>
             <hr>
             <p class="portfolio_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati consequuntur in pariatur!</p>
@@ -95,27 +133,29 @@
             </div>
             <div class="clear"></div>
         </div>
+       </div></div></div>
     </section>
     <section class="calculator">
-        <div class="calculator_container">
+       <div class="container"><div class="row"><div class="col-10 offset-1">
+           <div class="calculator_container">
             <h2>Расчет стоимости</h2>
-            <div class="calculator_inner">
+            <div class="calculator_inner px-2">
                 <h3>Тип Сайта</h3>
-                <select class="mySelect" name="type" id="typeSite">
+                <select class="mySelect w-100" name="type" id="typeSite">
                     <option value="1" selected disabled>Выберите пункт</option>
                     <option value="2">Сайт-визитка</option>
                     <option value="3">Корпоративный сайт</option>
                     <option value="4">Интернет-магазин</option>
                 </select>
                 <h3>Дизайн</h3>
-                <select class="mySelect" name="type" id="typeSite">
+                <select class="mySelect w-100" name="type" id="typeSite">
                     <option value="1" selected disabled>Выберите пункт</option>
                     <option value="2">Шаблонный</option>
                     <option value="3">Уникальный</option>
                     <option value="4">WOW-Дизайн</option>
                 </select>
                 <h3>Адаптивность</h3>
-                <select class="mySelect" name="type" id="typeSite">
+                <select class="mySelect w-100" name="type" id="typeSite">
                     <option value="1" selected disabled>Выберите пункт</option>
                     <option value="2">Только ПК</option>
                     <option value="3">Только мобильный сайт</option>
@@ -134,26 +174,26 @@
                         <p class="digit">0</p>
                         <div class="clear"></div>
                     </div>
-                    
                 </div>
             </div>
-        </div>
-    </section>
+        </div> </div> </div> </div>
+        </section>
     <section class="statistic">
-        <div class="statistic_container">
+       <div class="container"><div class="row align-items-center h-100"><div class="col-10 offset-1 d-flex align-items-center justify-content-center">
+           <div class="statistic_container">
             <h2>Немного статистики</h2>
             <hr>
-            <div class="statistic_item margin-right">
+            <div class="statistic_item">
                 <img src="img/logo1.png" alt="">
                 <h3>120</h3>
                 <p>Счастливых клиентов</p>
             </div>
-            <div class="statistic_item margin-right">
+            <div class="statistic_item">
                 <img src="img/logo2.png" alt="">
                 <h3>4600</h3>
                 <p>Часов работы</p>
             </div>
-            <div class="statistic_item margin-right">
+            <div class="statistic_item">
                 <img src="img/logo3.png" alt="">
                 <h3>340</h3>
                 <p>Проектов завершено</p>
@@ -164,9 +204,11 @@
                 <p>Наград получено</p>
             </div>
         </div>
-    </section>
+       </div></div></div>
+      </section>
     <section class="reviews">
-        <div class="reviews_container">
+       <div class="container"><div class="row"><div class="col-8 offset-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0 d-flex align-items-center justify-content-center">
+           <div class="reviews_container">
             <h2>Отзывы</h2>
             <hr>
             <div class="review">
@@ -180,17 +222,22 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="contacts">
-        <div class="contacts_container">
-            <h2>Мои Контакты</h2>
-            <hr>
-            <p class="contacts_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati!</p>
-            <div class="contacts_data">
-                <div class="contacts_data_item">
+           </div></div></div>
+     </section>   
+<section class="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 col-sm-12 offset-sm-0 align-items-center justify-content-center">
+               <div class="contacts_container">
+                    <h2>Мои Контакты</h2>
+                    <hr>
+                    <p class="contacts_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati!</p>
+            
+                <div class="contacts_data d-flex align-items-center justify-content-center">
+                    <div class="contacts_data_item">
                     <img src="img/geo.png" alt="">
                     <p>Санкт-Петербург, Невский проспект 11</p>
-                </div>
+                    </div>
                 <div class="contacts_data_item">
                     <img src="img/mail.png" alt="">
                     <p>info@mycompany.ru</p>
@@ -201,17 +248,17 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <h3>Оставьте мне сообщение</h3>
+                    <h3>Оставьте мне сообщение</h3>
             <form action="#">
-                <div class="contacts_inputs">
+                <div class="contacts_inputs w-100 align-items-center justify-content-center">
                     <input type="text" placeholder="Имя">
                     <input class="secondInput" type="text" placeholder="Email">
                     <div class="clear"></div>
                 </div>
-                <textarea placeholder="Сообщение" name="message" id="messageText" cols="30" rows="10"></textarea>
+                <textarea class="d-flex align-items-center justify-content-center" placeholder="Сообщение" name="message" id="messageText" cols="30" rows="5"></textarea>
                 <input type="button" value="Отправить">
             </form>
-            <div class="contacts_social">
+            <div class="contacts_social col-4 offset-4 d-flex align-items-center justify-content-center">
                 <a href="#" id="fb"><img src="img/fb.png" id="fb1" alt=""><img src="img/fb1.png" id="fb2" alt=""></a>
                 <a href="#" id="tvit"><img src="img/tvit.png" id="tvit1" alt=""> <img src="img/tvit1.png" id="tvit2" alt=""></a>
                 <a href="#" id="bool"><img src="img/bool.png" id="bool1" alt=""><img src="img/bool1.png" id="bool2" alt=""></a>
@@ -221,15 +268,20 @@
                 <div class="clear"></div>
             </div>
         </div>
+       </div></div></div>
     </section>
     <section class="map">
-        <img src="img/map.png" alt="">
-    </section>
+                  <img src="img/map.png" alt="">
+           </section>
     <footer class="footer">
-        <div class="footer_container">
+       <div class="container"><div class="row"><div class="col-12">
+           <div class="footer_container">
             <p>Copyright 2021 Андрей Браун. Design by Web</p>
         </div>
+       </div></div></div>
+        
     </footer>
     </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
