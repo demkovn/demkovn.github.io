@@ -1,71 +1,93 @@
-"use strict"
+$(document).ready(function(){
+    
+    /*Прелоадер*/
+    $(".preloader").css("display","none");
+    
+    /*Калькулятор*/
+    function calculate(){
+        let sum = parseInt($("#select1 option:selected").val()) + parseInt($("#select2 option:selected").val()) + parseInt($("#select3 option:selected").val());
+        let days = parseInt($("#select1 option:selected").attr("days")) + parseInt($("#select2 option:selected").attr("days")) + parseInt($("#select3 option:selected").attr("days"));
+        $(".days .digit").text(days);
+        $(".price .digit").text(sum);
+    }
+    $("select").on("change", function(){
+        calculate();
+    });
+    calculate();
+    
+    
+    /*Скроллиниг*/
+    $(window).scroll(() => {
+               let scrollDistance = $(window).scrollTop();
 
-let ready = confirm("Расчитать стоимость и сроки создания вашего сайта?");
-if(ready != true){
-    calculator = null;
+               $('.section').each((i, el) => {
+
+                   if ($(el).offset().top - $('nav').outerHeight() <= scrollDistance) {
+                       $('nav a').each((i, el) => {
+                           if ($(el).hasClass('active')) {
+                               $(el).removeClass('active');
+                           }
+                       });
+
+                       $('nav li:eq(' + i + ')').find('a').addClass('active');
+                   }
+
+               });
+           });
+    
+/*Бегущие цифры (не работает)*/
+ const time = 2000; // ms
+const step = 1; 
+
+function outNum(num, elem) {
+	let l = document.querySelector('#' + elem);
+	n = 0;
+	let t = Math.round(time/(num/step));
+	let interval = setInterval(() => {
+		n = n + step;
+		if (n == num) {
+			clearInterval(interval);
+		}
+		l.innerHTML = n;
+	},
+		t);
 }
 
-let sum = 0, days = 0;
+outNum(120, 'benefits_num');
+outNum(4600, 'benefits_num1');    
+outNum(340, 'benefits_num2');
+outNum(23, 'benefits_num3');   
+    
+    
 
-function calculator(){
-let site = prompt("Какой тип сайта?      1 - Сайт-визитка        2 - Корпоративный сайт      3 - Интернет-магазин");
-    
-if(site == "1"){
-    sum += 1000;
-    days += 2;
-    }
-else if(site == "2"){
-    sum += 3000;
-    days += 3;
-    }
-else if( site== "3"){
-    sum += 6000;
-    days += 5;
-    }
-else{
-    alert("Выберите один из предложенных вариантов!");
-    calc();
-    }
-    
-let design = prompt("Какой тип дизайна?      1 - Шаблонный       2 - Уникальный        3 - WOW-дизайн");
-    
-if(design == "1"){
-    sum += 2000;
-    days += 1;
-    }
-else if(design == "2"){
-    sum += 5000;
-    days += 3;
-    }
-else if(design == "3"){
-    sum += 8000;
-    days += 5;
-    }
-else{
-    alert("Выберите один из предложенных вариантов!");
-    calc();
-    }
-    
-let adaptive = prompt("Какой тип адаптивности?       1 - Только ПК        2 - Только мобильный сайт        3 - ПК + Мобильный");
+    /*Отложенная аннимация (не работает)*/
+    let options = {threshold:[0.7]};
+        let observer = new IntersectionObserver(onEntry, options);
+        let elements = $('.skills_item');
+        elements.each((i, el) => {
+            observer.observe(el);
+        });
+  
+     });
 
-if(adaptive == "1"){
-    sum += 3000;
-    days += 1;
-    }
-else if(adaptive == "2"){
-    sum += 3000;
-    days += 2;
-    }
-else if(adaptive == "3"){
-    sum += 5000;
-    days += 5;
-    }
-else{
-    alert("Выберите один из предложенных вариантов!");
-    calc();
+function onEntry(entry){
+        entry.forEach(change => {
+            if(change.isIntersecting){
+                change.target.classList.add('.show_skills_item');
+            }
+        })
     }
     
-}
-calculator();
+/*Якорные ссылки*/
+$('a[href^="#"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top -20 + "px"});
+});
 
-alert("Стоимость: " + sum + " рублей        Сроки: " + days + " дней");
+/*Картинка в модальном окне (не работает)*/
+$(function(){
+ $('.modal_window').magnificPopup({type: 'image'
+ });
+ });
+
+

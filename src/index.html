@@ -12,9 +12,14 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://myfonts.ru/myfonts?fonts=bahnschrift" rel="stylesheet" type="text/css" />
+    <link href="https://myfonts.ru/myfonts?fonts=myriad-pro" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header>
+   <div class="preloader" id="page-preloader">
+  <div class="loader"></div>
+ </div>
+      <header>
         <nav>
            <div class="container">
                <div class="row">
@@ -24,12 +29,12 @@
                    <div class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
                        <div class="menu">
                 <ul>
-                    <li><a href="#">Обо мне</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Кейсы</a></li>
-                    <li><a href="#">Прайс</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#about_me">Обо мне</a></li>
+                    <li><a href="#skills">Услуги</a></li>
+                    <li><a href="#portfolio">Кейсы</a></li>
+                    <li><a href="#calc">Прайс</a></li>
+                    <li><a href="#rewiews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
                         </div>
                   </div>
@@ -40,12 +45,12 @@
   </a>
 
   <ul class="dropdown-menu">
-                     <li><a class="dropdown-item" href="#">Обо мне</a></li>
-                    <li><a class="dropdown-item" href="#">Услуги</a></li>
-                    <li><a class="dropdown-item" href="#">Кейсы</a></li>
-                    <li><a class="dropdown-item" href="#">Прайс</a></li>
-                    <li><a class="dropdown-item" href="#">Отзывы</a></li>
-                    <li><a class="dropdown-item" href="#">Контакты</a></li>
+                     <li><a class="dropdown-item" href="#about_me">Обо мне</a></li>
+                    <li><a class="dropdown-item" href="#skills">Услуги</a></li>
+                    <li><a class="dropdown-item" href="#portfolio">Кейсы</a></li>
+                    <li><a class="dropdown-item" href="#calc">Прайс</a></li>
+                    <li><a class="dropdown-item" href="#rewiews">Отзывы</a></li>
+                    <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
      </ul>
                     </div>
                   </div>
@@ -71,7 +76,7 @@
         </div>
      </section>
     
-    <section class="about_me">
+    <section class="about_me section" id="about_me">
       <div class="container"><div class="row"><div class="px-3 col-lg-8 offset-lg-2 col-md-12 justify-content-center">
           <div class="about_me_container" id="on-off">
             <h2>Обо мне</h2>
@@ -84,27 +89,27 @@
       </div></div></div>
        
     </section>
-    <section class="skills">
+    <section class="skills section" id="skills">
        <div class="container"><div class="row align-items-center justify-content-center h-100"><div class="px-0 col-12 offset-0 align-items-center justify-content-center">
            <div class="skills_container">
             <h2>Что я умею</h2>
             <hr>
-            <div class="skills_item">
+            <div class="skills_item align-items-center justify-content-center">
                 <img src="img/pc.png" alt="">
                 <h3>Веб-дизайн</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
             </div>
-            <div class="skills_item">
+            <div class="skills_item align-items-center justify-content-center">
                 <img src="img/log.png" alt="">
                 <h3>Разработка</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
             </div>
-            <div class="skills_item">
+            <div class="skills_item align-items-center justify-content-center">
                 <img src="img/log2.png" alt="">
                 <h3>СЕО оптимизация</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
             </div>
-            <div class="skills_item">
+            <div class="skills_item align-items-center justify-content-center">
                 <img src="img/log3.png" alt="">
                 <h3>Маркетинг</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
@@ -113,53 +118,102 @@
         </div>
       </div></div> </div>       
     </section>
-    <section class="portfolio">
+    <section class="portfolio section" id="portfolio">
        <div class="container"><div class="row"><div class="col-12 align-items-center justify-content-center">
            <div class="portfolio_container">
             <h2>Кейсы</h2>
             <hr>
             <p class="portfolio_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati consequuntur in pariatur!</p>
-            <img src="img/photo.png" alt="">
+            
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p><a class="modal_window" href="img/photo.png"><img src="img/photo.png" alt=""></a></p>
             <div class="description_left">
                 <h3>Client:</h3>
                 <p>Какая-то компания</p>
                 <h3>Website:</h3>
                 <p>https://somedomain.ru</p>
-                <a href="#">Visit Live Site</a>
+                <a href="#">Перейти на сайт</a>
             </div>
             <div class="description_right">
                 <h4>Название проекта</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum blanditiis, debitis a ipsa fugit ad architecto adipisci obcaecati. Quos magnam, hic vero omnis numquam tempore laborum, similique tempora consequatur debitis a iure eaque. Vel cupiditate, maxime! Nemo adipisci quia velit.</p>
             </div>
+    </div>
+    <div class="carousel-item" id="slide2">
+      <p><a class="modal_window" href="img/photo.png"><img src="img/photo.png" alt=""></a></p>
+            <div class="description_left">
+                <h3>Client:</h3>
+                <p>Какая-то компания</p>
+                <h3>Website:</h3>
+                <p>https://somedomain.ru</p>
+                <a href="#">Перейти на сайт</a>
+            </div>
+            <div class="description_right">
+                <h4>Название проекта</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum blanditiis, debitis a ipsa fugit ad architecto adipisci obcaecati. Quos magnam, hic vero omnis numquam tempore laborum, similique tempora consequatur debitis a iure eaque. Vel cupiditate, maxime! Nemo adipisci quia velit.</p>
+            </div>
+    </div>
+    <div class="carousel-item" id="slide3">
+      <p><a class="modal_window" title="Описание изображения" href="img/photo.png"><img src="img/photo.png" alt=""></a></p>
+            <div class="description_left">
+                <h3>Client:</h3>
+                <p>Какая-то компания</p>
+                <h3>Website:</h3>
+                <p>https://somedomain.ru</p>
+                <a href="#">Перейти на сайт</a>
+            </div>
+            <div class="description_right">
+                <h4>Название проекта</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum blanditiis, debitis a ipsa fugit ad architecto adipisci obcaecati. Quos magnam, hic vero omnis numquam tempore laborum, similique tempora consequatur debitis a iure eaque. Vel cupiditate, maxime! Nemo adipisci quia velit.</p>
+            </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+                 
             <div class="clear"></div>
         </div>
        </div></div></div>
     </section>
-    <section class="calculator">
+    <section class="calculator section" id="calc">
        <div class="container"><div class="row"><div class="col-10 offset-1">
            <div class="calculator_container">
             <h2>Расчет стоимости</h2>
             <div class="calculator_inner px-2">
                 <h3>Тип Сайта</h3>
-                <select class="mySelect w-100" name="type" id="typeSite">
-                    <option value="1" selected disabled>Выберите пункт</option>
-                    <option value="2">Сайт-визитка</option>
-                    <option value="3">Корпоративный сайт</option>
-                    <option value="4">Интернет-магазин</option>
+                <select id="select1" class="mySelect w-100" name="type" id="typeSite">
+                    <option value="0" days="0"selected disabled>Выберите пункт</option>
+                    <option value="1500" days="2">Сайт-визитка</option>
+                    <option value="3000" days="4">Корпоративный сайт</option>
+                    <option value="5000" days="7">Интернет-магазин</option>
                 </select>
                 <h3>Дизайн</h3>
-                <select class="mySelect w-100" name="type" id="typeSite">
-                    <option value="1" selected disabled>Выберите пункт</option>
-                    <option value="2">Шаблонный</option>
-                    <option value="3">Уникальный</option>
-                    <option value="4">WOW-Дизайн</option>
+                <select id="select2" class="mySelect w-100" name="type" id="typeSite">
+                    <option value="0" days="0" selected disabled>Выберите пункт</option>
+                    <option value="1000" days="2">Шаблонный</option>
+                    <option value="2500"days="3">Уникальный</option>
+                    <option value="4000"days="5">WOW-Дизайн</option>
                 </select>
                 <h3>Адаптивность</h3>
-                <select class="mySelect w-100" name="type" id="typeSite">
-                    <option value="1" selected disabled>Выберите пункт</option>
-                    <option value="2">Только ПК</option>
-                    <option value="3">Только мобильный сайт</option>
-                    <option value="4">ПК + Мобильный</option>
+                <select id="select3" class="mySelect w-100" name="type" id="typeSite">
+                    <option value="0" days="0"selected disabled>Выберите пункт</option>
+                    <option value="2000" days="2">Только ПК</option>
+                    <option value="2000" days="2">Только мобильный сайт</option>
+                    <option value="5000" days="4">ПК + Мобильный</option>
                 </select>
                 <hr>
                 <div class="calculator_footer">
@@ -174,6 +228,7 @@
                         <p class="digit">0</p>
                         <div class="clear"></div>
                     </div>
+                    <a href="#">Оставить заявку</a>
                 </div>
             </div>
         </div> </div> </div> </div>
@@ -185,35 +240,38 @@
             <hr>
             <div class="statistic_item">
                 <img src="img/logo1.png" alt="">
-                <h3>120</h3>
+                <h3 id="benefits_num">120</h3>
                 <p>Счастливых клиентов</p>
             </div>
             <div class="statistic_item">
                 <img src="img/logo2.png" alt="">
-                <h3>4600</h3>
+                <h3 id="benefits_num1">4600</h3>
                 <p>Часов работы</p>
             </div>
             <div class="statistic_item">
                 <img src="img/logo3.png" alt="">
-                <h3>340</h3>
+                <h3 id="benefits_num2">340</h3>
                 <p>Проектов завершено</p>
             </div>
             <div class="statistic_item fourth">
                 <img src="img/logo4.png" alt="">
-                <h3>23</h3>
+                <h3 id="benefits_num3">23</h3>
                 <p>Наград получено</p>
             </div>
         </div>
        </div></div></div>
       </section>
-    <section class="reviews">
+    <section class="reviews section" id="rewiews">
        <div class="container"><div class="row"><div class="col-8 offset-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0 d-flex align-items-center justify-content-center">
            <div class="reviews_container">
             <h2>Отзывы</h2>
             <hr>
-            <div class="review">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" id="slide1_rew" data-bs-interval="10000">
+      <div class="review">
                 <img src="img/mihail.png" alt="">
-                <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cum totam saepe laborum quae tenetur blanditiis laboriosam asperiores repellat quas!</p>
+                <p class="review_text mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cum totam saepe laborum quae tenetur blanditiis laboriosam asperiores repellat quas!</p>
                 <p class="review_author"> <span>Михаил</span>, Ген. Директор ПАО "Газпром"</p>
                 <div class="scroll">
                 <img src="img/org.png" alt="">
@@ -221,10 +279,47 @@
                 <img src="img/org1.png" alt="">
                 </div>
             </div>
-        </div>
+    </div>
+    <div class="carousel-item" id="slide2_rew" data-bs-interval="2000">
+      <div class="review">
+                <img src="img/mihail.png" alt="">
+                <p class="review_text mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cum totam saepe laborum quae tenetur blanditiis laboriosam asperiores repellat quas!</p>
+                <p class="review_author"> <span>Михаил</span>, Ген. Директор ПАО "Газпром"</p>
+                <div class="scroll">
+                <img src="img/org1.png" alt="">
+                <img src="img/org.png" alt="">
+                <img src="img/org1.png" alt="">
+                </div>
+            </div>
+    </div>
+    <div class="carousel-item" id="slide3_rew">
+         <div class="review">
+                <img src="img/mihail.png" alt="">
+                <p class="review_text mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cum totam saepe laborum quae tenetur blanditiis laboriosam asperiores repellat quas!</p>
+                <p class="review_author"> <span>Михаил</span>, Ген. Директор ПАО "Газпром"</p>
+                <div class="scroll">
+                <img src="img/org1.png" alt="">
+                <img src="img/org1.png" alt="">
+                <img src="img/org.png" alt="">
+                </div>
+            </div>
+          </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+           
+         
+            </div>
            </div></div></div>
      </section>   
-<section class="contacts">
+<section class="contacts section" id="contacts">
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 col-sm-12 offset-sm-0 align-items-center justify-content-center">
@@ -233,7 +328,7 @@
                     <hr>
                     <p class="contacts_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati!</p>
             
-                <div class="contacts_data d-flex align-items-center justify-content-center">
+                <div class="contacts_data row d-flex align-items-center justify-content-center">
                     <div class="contacts_data_item">
                     <img src="img/geo.png" alt="">
                     <p>Санкт-Петербург, Невский проспект 11</p>
@@ -258,7 +353,7 @@
                 <textarea class="d-flex align-items-center justify-content-center" placeholder="Сообщение" name="message" id="messageText" cols="30" rows="5"></textarea>
                 <input type="button" value="Отправить">
             </form>
-            <div class="contacts_social col-4 offset-4 d-flex align-items-center justify-content-center">
+            <div class="contacts_social col-6 offset-3 col-sm-12 offset-sm-0 d-flex w-100 align-items-center justify-content-center">
                 <a href="#" id="fb"><img src="img/fb.png" id="fb1" alt=""><img src="img/fb1.png" id="fb2" alt=""></a>
                 <a href="#" id="tvit"><img src="img/tvit.png" id="tvit1" alt=""> <img src="img/tvit1.png" id="tvit2" alt=""></a>
                 <a href="#" id="bool"><img src="img/bool.png" id="bool1" alt=""><img src="img/bool1.png" id="bool2" alt=""></a>
@@ -282,7 +377,13 @@
         
     </footer>
     </main>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    
+ 
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/myScript.js"></script>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
