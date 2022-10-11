@@ -9,6 +9,7 @@
 
     <meta property="og:title" content="Это моя первая страница...">
     <title>Андрей Браун - Веб-разработчик</title>
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -124,7 +125,6 @@
             <h2>Кейсы</h2>
             <hr>
             <p class="portfolio_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati consequuntur in pariatur!</p>
-            
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -132,47 +132,14 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <p><a class="modal_window" href="img/photo.png"><img src="img/photo.png" alt=""></a></p>
-            <div class="description_left">
-                <h3>Client:</h3>
-                <p>Какая-то компания</p>
-                <h3>Website:</h3>
-                <p>https://somedomain.ru</p>
-                <a href="#">Перейти на сайт</a>
-            </div>
-            <div class="description_right">
-                <h4>Название проекта</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum blanditiis, debitis a ipsa fugit ad architecto adipisci obcaecati. Quos magnam, hic vero omnis numquam tempore laborum, similique tempora consequatur debitis a iure eaque. Vel cupiditate, maxime! Nemo adipisci quia velit.</p>
-            </div>
+    <div class="carousel-item active" >
+      <a class="modal_window" href="img/photo.png"><img src="img/photo.png" class="d-block w-100" alt="..."></a>
     </div>
-    <div class="carousel-item" id="slide2">
-      <p><a class="modal_window" href="img/photo.png"><img src="img/photo.png" alt=""></a></p>
-            <div class="description_left">
-                <h3>Client:</h3>
-                <p>Какая-то компания</p>
-                <h3>Website:</h3>
-                <p>https://somedomain.ru</p>
-                <a href="#">Перейти на сайт</a>
-            </div>
-            <div class="description_right">
-                <h4>Название проекта</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum blanditiis, debitis a ipsa fugit ad architecto adipisci obcaecati. Quos magnam, hic vero omnis numquam tempore laborum, similique tempora consequatur debitis a iure eaque. Vel cupiditate, maxime! Nemo adipisci quia velit.</p>
-            </div>
+    <div class="carousel-item">
+      <a class="modal_window" href="img/photo.png"><img src="img/photo.png" class="d-block w-100" alt="..."></a>
     </div>
-    <div class="carousel-item" id="slide3">
-      <p><a class="modal_window" title="Описание изображения" href="img/photo.png"><img src="img/photo.png" alt=""></a></p>
-            <div class="description_left">
-                <h3>Client:</h3>
-                <p>Какая-то компания</p>
-                <h3>Website:</h3>
-                <p>https://somedomain.ru</p>
-                <a href="#">Перейти на сайт</a>
-            </div>
-            <div class="description_right">
-                <h4>Название проекта</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum blanditiis, debitis a ipsa fugit ad architecto adipisci obcaecati. Quos magnam, hic vero omnis numquam tempore laborum, similique tempora consequatur debitis a iure eaque. Vel cupiditate, maxime! Nemo adipisci quia velit.</p>
-            </div>
+    <div class="carousel-item">
+      <a class="modal_window" href="img/photo.png"><img src="img/photo.png" class="d-block w-100" alt="..."></a>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -184,10 +151,21 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-                 
+                <div class="description_left">
+                <h3>Client:</h3>
+                <p>Какая-то компания</p>
+                <h3>Website:</h3>
+                <p>https://somedomain.ru</p>
+                <a href="#">Перейти на сайт</a>
+            </div>
+            <div class="description_right">
+                <h4>Название проекта</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum blanditiis, debitis a ipsa fugit ad architecto adipisci obcaecati. Quos magnam, hic vero omnis numquam tempore laborum, similique tempora consequatur debitis a iure eaque. Vel cupiditate, maxime! Nemo adipisci quia velit.</p>
+            </div>
+    </div>
             <div class="clear"></div>
         </div>
-       </div></div></div>
+       </div></div>
     </section>
     <section class="calculator section" id="calc">
        <div class="container"><div class="row"><div class="col-10 offset-1">
@@ -240,23 +218,23 @@
             <hr>
             <div class="statistic_item">
                 <img src="img/logo1.png" alt="">
-                <h3 id="benefits_num">120</h3>
-                <p>Счастливых клиентов</p>
+                <h3 id="benefits_num" class="benefits_num">0</h3>
+                <p class="benefits_text">Счастливых клиентов</p>
             </div>
             <div class="statistic_item">
                 <img src="img/logo2.png" alt="">
-                <h3 id="benefits_num1">4600</h3>
-                <p>Часов работы</p>
+                <h3 id="benefits_num1" class="benefits_num1">0</h3>
+                <p class="benefits_text">Часов работы</p>
             </div>
             <div class="statistic_item">
                 <img src="img/logo3.png" alt="">
-                <h3 id="benefits_num2">340</h3>
-                <p>Проектов завершено</p>
+                <h3 id="benefits_num2" class="benefits_num2">0</h3>
+                <p class="benefits_text">Проектов завершено</p>
             </div>
             <div class="statistic_item fourth">
                 <img src="img/logo4.png" alt="">
-                <h3 id="benefits_num3">23</h3>
-                <p>Наград получено</p>
+                <h3 id="benefits_num3" class="benefits_num3">0</h3>
+                <p class="benefits_text">Наград получено</p>
             </div>
         </div>
        </div></div></div>
@@ -378,11 +356,26 @@
     </footer>
     </main>
     
+    <div class="modalwindow">
+        <div class="modalwindowDialog">
+            <div class="modalwindow-header">
+                <div class="modalwindow-title">Заголовок модального окна</div>
+                <div class="modalwindow-close">&times;</div>
+            </div>
+            <div class="modalwindow-text">Текст модального окна.</div>
+            <div class="modalwindow-footer">Оформить</div>
+        </div>
+    </div>
  
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/myScript.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/statisticAnimate.js"></script>
+    <script src="js/scrolling.js"></script>
+    <script src="js/calculatePriceDay.js"></script>
+    <script src="js/delayAnimation.js"></script>
+    <script src="js/modal.js"></script>
     
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
