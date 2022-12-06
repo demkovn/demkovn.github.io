@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <title>Loader with ripple effect - @code.scientist</title>
+</head>
+
+<style>
+   .center-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /****** center box
+    width: 300px;
+    height: 300px;
+    border: solid 1px #aaa; */
+}
+
+body {
+    background: #202628;
+}
+
+.loader-circle-39 {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    position: relative;
+}
+
+.loader-circle-39 span {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    display: inline-block;
+    position: absolute;
+}
+
+.loader-circle-39 span:nth-child(1) {
+    border-right-color: #ff9800;
+    animation: loader-circle-39-clockwise 2s linear infinite;
+}
+
+.loader-circle-39 span:nth-child(2) {
+    border-left-color: #ff9800;
+    animation: loader-circle-39-antiClockwise 2s linear infinite;
+}
+
+.loader-circle-39 span:nth-child(3) {
+    height: 16px;
+    width: 16px;
+    border: 0;
+    background-color: #ff9800;
+    top: 28px;
+    left: 28px;
+    animation: loader-circle-39-upDown 2s linear infinite;
+}
+
+@keyframes loader-circle-39-upDown {
+    0% {
+        transform: translate(0, 30px);
+    }
+
+    50% {
+        transform: translate(0, -30px);
+    }
+
+    100% {
+        transform: translate(0, 30px);
+    }
+}
+
+@keyframes loader-circle-39-antiClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes loader-circle-39-clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+    
+</style>
+
+<body>
+    <div class="center-body">
+        <div class="loader-circle-39">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>
